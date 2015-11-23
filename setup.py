@@ -93,7 +93,10 @@ def get_install_requirements(path):
 
 
 def read(fname):
-    return open(os.path.join(__location__, fname), encoding='utf-8').read()
+    try:
+        return open(os.path.join(__location__, fname), encoding='utf-8').read()
+    except TypeError:
+        return open(os.path.join(__location__, fname)).read()
 
 
 def check_deps(deps):

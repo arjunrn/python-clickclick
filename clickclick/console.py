@@ -1,3 +1,4 @@
+# coding=utf-8
 import click
 import datetime
 import json
@@ -238,7 +239,7 @@ def print_table(cols, rows, styles=None, titles=None, max_column_widths=None):
         click.echo('')
 
 
-def choice(prompt: str, options: list, default=None):
+def choice(prompt, options, default=None):
     """
     Ask to user to select one option and return it
     """

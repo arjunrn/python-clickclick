@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import datetime
 import pytest
 import time
@@ -70,7 +72,7 @@ def test_text_out(capsys):
         warning('this is a warning')
         print_table('a b'.split(), [{}, {}])
     out, err = capsys.readouterr()
-    assert 'A│B\n    \n    \n' == out
+    assert u'A│B\n    \n    \n' == out
     assert 'this is a warning\n' == err
 
 
